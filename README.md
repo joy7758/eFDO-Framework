@@ -57,11 +57,20 @@ This framework is built upon three philosophical pillars designed to establish t
 
 ```bash
 python3 efdo_id.py
+Expected Output / 预期输出:
+
+Plaintext
+------------------------------
+eFDO Created Successfully! / eFDO 创建成功！
+Owner (所有者): joy7759@gmail.com
+Sovereign PID (主权标识): efdo:8d7e9a1b2c3d4f5e
+------------------------------
 👨‍💻 Author / 作者
 Name: Zhang Bin (张斌)
 
 Email: joy7759@gmail.com
 
 Role: Chief Architect / 首席架构师
+
 📄 License / 许可
 This project is licensed under the MIT License. 本项目采用 MIT 许可证。
