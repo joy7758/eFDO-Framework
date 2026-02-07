@@ -57,8 +57,3 @@ This framework is built upon three philosophical pillars designed to establish t
 
 ```bash
 python3 efdo_id.py
-------------------------------
-eFDO Created Successfully! / eFDO 创建成功！
-Owner (所有者): joy7759@gmail.com
-Sovereign PID (主权标识): efdo:8d7e9a1b2c3d4f5e
-------------------------------
