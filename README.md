@@ -1,5 +1,8 @@
 # EIS-2026: Industrial Sovereign Autonomy Standard
 
+![System Demo]](https://github.com/user-attachments/assets/a5e85f07-6f4f-494e-940e-d618deea9f76)
+
+
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![Standard: FDO](https://img.shields.io/badge/Standard-FDO%202.0-orange.svg)](https://fairdo.org)
 [![Status: Sovereign](https://img.shields.io/badge/Status-Sovereign-green.svg)]()
@@ -45,30 +48,7 @@ Where:
 
 Initialize the sovereign node and start the lifecycle:
 
-1.  **Start the Sovereign Monitor** (Web Dashboard)
-    ```bash
-    python3 live_monitor.py
-    # Access: http://localhost:8000/dashboard.html
-    ```
-
-2.  **Execute the Sovereign Publish Cycle** (In a new terminal)
-    ```bash
-    ./publish.sh
-    # Pipeline: Evolve -> Inject Data -> Anchor IPFS -> Update License
-    ```
-
----
-
-## 📜 Sovereign Licensing
-
-This framework is protected under **GPL-3.0**. 
-
-**Commercial Protocol**:
-- **Status GREEN**: Asset is healthy. `ACCESS_TOKEN` is valid.
-- **Status RED**: Asset is fatigued (>95%). License is **REVOKED**.
-
----
-
-**Author**: Zhang Bin (FDO Architect)  
-**Contact**: joy7759@gmail.com  
-**Lab**: Sovereign Node 01
+### 1. Start the Sovereign Monitor
+```bash
+python3 live_monitor.py
+# Access: http://localhost:8000/dashboard.html
