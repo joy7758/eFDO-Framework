@@ -57,42 +57,17 @@ This framework is built upon three philosophical pillars designed to establish t
 
 ```bash
 python3 efdo_id.py
-Expected Output / 预期输出:
-
-Plaintext
 ------------------------------
 eFDO Created Successfully! / eFDO 创建成功！
 Owner (所有者): joy7759@gmail.com
 Sovereign PID (主权标识): efdo:8d7e9a1b2c3d4f5e
 ------------------------------
-👨‍💻 Author / 作者
-Name: Zhang Bin (张斌)
-
-Email: joy7759@gmail.com
-
-Role: Chief Architect / 首席架构师
-
-📄 License / 许可
-This project is licensed under the MIT License. 本项目采用 MIT 许可证。
-
+#### **第 3 步：粘贴并保存**
+* 把刚才复制的内容粘贴进去。
+* **检查最后一行**：确保你的文件是以上面这行 `MIT 许可证。` 结尾的。
+* 如果下面还有 `### 第四步` 这种字，**手动删掉它们**。
+* 点击 **Commit changes**。
 
 ---
 
-### **第四步：粘贴**
-
-1.  回到 GitHub 那个刚才已经清空的大白框里。
-2.  **粘贴**（Mac: `Command + V`, Windows: `Ctrl + V`）。
-
----
-
-### **第五步：保存**
-
-1.  页面拉到最底端。
-2.  点击那个绿色的 **`Commit changes`** 按钮。
-
----
-
-**完成！**
-现在刷新一下页面，你看到的应该是非常整齐的排版，最下面的“Author / 作者”应该是黑色的大标题，而不是缩在灰色框框里的代码。
-
-如果这次看起来正常了，请回我这三个字：**“正常了”**。然后我们做最简单的最后一步。
+**这次一定没问题了！做完告诉我“好了”，我们去做最后一步：写发布宣言。**
