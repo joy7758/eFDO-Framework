@@ -62,12 +62,5 @@ eFDO Created Successfully! / eFDO 创建成功！
 Owner (所有者): joy7759@gmail.com
 Sovereign PID (主权标识): efdo:8d7e9a1b2c3d4f5e
 ------------------------------
-#### **第 3 步：粘贴并保存**
-* 把刚才复制的内容粘贴进去。
-* **检查最后一行**：确保你的文件是以上面这行 `MIT 许可证。` 结尾的。
-* 如果下面还有 `### 第四步` 这种字，**手动删掉它们**。
-* 点击 **Commit changes**。
-
----
-
-**这次一定没问题了！做完告诉我“好了”，我们去做最后一步：写发布宣言。**
+📄 License / 许可
+This project is licensed under the MIT License. 本项目采用 MIT 许可证。
