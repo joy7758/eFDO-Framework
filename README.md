@@ -1,7 +1,6 @@
 # EIS-2026: Industrial Sovereign Autonomy Standard
 
-![System Demo]](https://github.com/user-attachments/assets/a5e85f07-6f4f-494e-940e-d618deea9f76)
-
+![System Demo](https://github.com/user-attachments/assets/a5e85f07-6f4f-494e-940e-d618deea9f76)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![Standard: FDO](https://img.shields.io/badge/Standard-FDO%202.0-orange.svg)](https://fairdo.org)
@@ -11,28 +10,21 @@
 
 ---
 
-## 🏗 System Architecture (架构全景)
+## 🏗 System Architecture
 
 The EIS-2026 standard defines a closed-loop ecosystem for industrial assets:
 
-1.  **Identity Layer (`did_generator.py`)**
-    - **Standard**: W3C DID (Decentralized Identifiers).
-    - **Mechanism**: Generates immutable `did:efdo:uuid` based on `Ed25519` cryptographic keys.
+- **Identity Layer (`did_generator.py`)** Standard: W3C DID. Generates immutable `did:efdo:uuid` via `Ed25519` keys.
 
-2.  **Kinetic Layer (`robot_adapter.py`)**
-    - **Telemetry**: Real-time injection of Torque (Nm) and Temperature (°C).
-    - **Safety**: Implements a "Physical Circuit Breaker" that triggers `CRITICAL_HALT`.
+- **Kinetic Layer (`robot_adapter.py`)** Telemetry: Real-time Torque/Temp injection. Implements "Physical Circuit Breaker".
 
-3.  **Storage Layer (`ipfs_anchor.py`)**
-    - **Anchoring**: Periodic state snapshots are hashed (CID) and pinned to the **IPFS** network.
+- **Storage Layer (`ipfs_anchor.py`)** Anchoring: Periodic state snapshots are hashed (CID) and pinned to IPFS.
 
-4.  **Commercial Layer (`license_vault.py`)**
-    - **Dynamic Licensing**: Automatically manages **GPL-3.0** compliance.
-    - **Rule**: If `Fatigue_Index > 95%`, the API Token is revoked.
+- **Commercial Layer (`license_vault.py`)** Dynamic Licensing: Revokes API Token if `Fatigue_Index > 95%`.
 
 ---
 
-## 📐 Mathematical Model (核心算法)
+## 📐 Mathematical Model
 
 The value of an eFDO asset is dynamically calculated based on its kinetic health:
 
@@ -44,11 +36,30 @@ Where:
 
 ---
 
-## 🚀 Quick Start (一键部署)
+## 🚀 Quick Start
 
-Initialize the sovereign node and start the lifecycle:
+Initialize the sovereign node and start the lifecycle using the commands below:
 
-### 1. Start the Sovereign Monitor
 ```bash
+# --- TERMINAL 1: Start the Sovereign Monitor ---
 python3 live_monitor.py
-# Access: http://localhost:8000/dashboard.html
+# -> Dashboard is now live at: http://localhost:8000/dashboard.html
+
+
+# --- TERMINAL 2: Execute the Sovereign Publish Cycle ---
+./publish.sh
+# -> Pipeline executed: Evolve -> Inject Data -> Anchor IPFS -> Update License
+📜 Sovereign Licensing
+This framework is protected under GPL-3.0.
+
+Commercial Protocol:
+
+Status GREEN: Asset is healthy. ACCESS_TOKEN is valid.
+
+Status RED: Asset is fatigued (>95%). License is REVOKED.
+
+Author: Zhang Bin (FDO Architect)
+
+Contact: joy7759@gmail.com
+
+Lab: Sovereign Node 01
