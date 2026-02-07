@@ -3,7 +3,7 @@
 
 ![Version](https://img.shields.io/badge/version-v1.1.0--stable-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Field](https://img.shields.io/badge/field-FDO--Sovereignty-orange)
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/你的图片真实地址" width="650px" />
+  <img src="https://s1.ezgif.com/tmp/ezgif-107c5ad7c3dc41ba.gif" width="650px" />
   <p align="center">
     <b>Experimental Milestone: Gen 91 Autonomous Evolution & Circuit Breaker Triggered</b><br/>
     <i>"A visual proof of Controlled Co-Prosperity within the eFDO Framework"</i>
