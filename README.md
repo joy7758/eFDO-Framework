@@ -44,26 +44,8 @@ $$V_{\mathrm{kinetic}} = V_{\mathrm{base}} \times (1 - \mathrm{Fatigue\_Index}) 
 
 Follow these steps to initialize the sovereign node.
 
-### Step 1: Launch the Sovereign Monitor
-Execute the real-time telemetry and dashboard service:
-
-```bash
-python3 live_monitor.py
-
-### Step 2: Execute the Sovereign Publish Cycle
-./publish.sh
-(Workflow: Evolve -> Inject Data -> Anchor IPFS -> Update License)
-
----
-
-## 📜 Sovereign Licensing & Compliance
-
-Protected under GPL-3.0 License.
-
-- Status GREEN: Asset health is normal. ACCESS_TOKEN is valid.
-- Status RED: Asset is fatigued (Index > 95%). License is REVOKED.
-
----
-Author: Zhang Bin (FDO Architect)
-Contact: joy7759@gmail.com
-Lab: Sovereign Node 01 (Mac-Mini-ZB)
+================================================
+[PHASE 01: TELEMETRY]执行实时遥测与监控：python3 live_monitor.py================================================
+[PHASE 02: PUBLISH]执行 FDO 主权发布周期：chmod +x publish.sh && ./publish.sh[WORKFLOW LOGIC]EVOLVE -> INJECT_DATA -> ANCHOR_IPFS -> UPDATE_LICENSE================================================
+[COMPLIANCE & LICENSING]PROTOCOL: GPL-3.0 LicenseSTATUS_GREEN: Health OK / Token ValidSTATUS_RED: Fatigue Index $> 95\%$ (License REVOKED)================================================
+[METADATA]ARCHITECT: Zhang Bin (FDO Specialist)CONTACT: joy7759@gmail.comNODE_ID: Mac-Mini-ZB (Sovereign Node 01)
