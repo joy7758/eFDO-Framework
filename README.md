@@ -4,51 +4,69 @@
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![Standard: FDO](https://img.shields.io/badge/Standard-FDO%202.0-orange.svg)](https://fairdo.org)
+[![Status: Sovereign](https://img.shields.io/badge/Status-Sovereign-green.svg)]()
 
-> The eFDO Framework: A reference implementation for Kinetic FAIR Digital Objects (K-FDO).
-
----
-
-## 1. System Architecture
-
-[ Identity Layer - did_generator.py ]
-Standard: W3C DID. Generates immutable did:efdo:uuid via Ed25519 keys.
-
-[ Kinetic Layer - robot_adapter.py ]
-Telemetry: Real-time Torque/Temp injection. Implements "Physical Circuit Breaker".
-
-[ Storage Layer - ipfs_anchor.py ]
-Anchoring: Periodic state snapshots are hashed (CID) and pinned to IPFS.
-
-[ Commercial Layer - license_vault.py ]
-Dynamic Licensing: Revokes API Token if Fatigue_Index > 95%.
+> **The eFDO Framework**: A reference implementation for Kinetic FAIR Digital Objects (K-FDO) with self-sovereign identity, decentralized anchoring, and state-based commercial licensing.
 
 ---
 
-## 2. Mathematical Model
+## 🏗 System Architecture (架构全景)
 
-Value = Base_Value * (1 - Fatigue_Index) * Alpha
+The EIS-2026 standard defines a closed-loop ecosystem for industrial assets:
+
+### Identity Layer (`did_generator.py`)
+- **Standard**: W3C DID (Decentralized Identifiers).
+- **Mechanism**: Generates immutable `did:efdo:uuid` based on `Ed25519` cryptographic keys.
+
+### Kinetic Layer (`robot_adapter.py`)
+- **Telemetry**: Real-time injection of Torque (Nm) and Temperature (°C).
+- **Safety**: Implements a "Physical Circuit Breaker" that triggers `CRITICAL_HALT`.
+
+### Storage Layer (`ipfs_anchor.py`)
+- **Anchoring**: Periodic state snapshots are hashed (CID) and pinned to the **IPFS** network.
+
+### Commercial Layer (`license_vault.py`)
+- **Dynamic Licensing**: Automatically manages **GPL-3.0** compliance.
+- **Rule**: If `Fatigue\_Index > 95%`, the API Token is revoked to enforce maintenance.
+
+---
+
+## 📐 Mathematical Model (核心算法)
+
+The value of an eFDO asset is dynamically calculated based on its kinetic health:
+
+$$V_{kinetic} = V_{base} \times (1 - \text{Fatigue\_Index}) \times \alpha$$
 
 Where:
-- Fatigue_Index = function(Torque, Temp)
-- Alpha: 1.0 (Valid) or 0.0 (Revoked)
+- $\text{Fatigue\_Index} = f(\text{Torque}, \text{Temp})$
+- $\alpha$: Sovereign Coefficient (1.0 for valid license, 0.0 for revoked).
 
 ---
 
-## 3. Quick Start
+## 🚀 Quick Start (一键部署)
 
-### STEP 1: Start Monitor
+Initialize the sovereign node and start the lifecycle:
+
+### Step 1: Start the Sovereign Monitor
+Launch the real-time telemetry dashboard:
+```bash
 python3 live_monitor.py
-
-### STEP 2: Publish
+# Access Dashboard: http://localhost:8000/dashboard.html
+Step 2: Execute the Sovereign Publish Cycle
+Trigger the industrial data injection pipeline:
 ./publish.sh
+# Pipeline: Evolve -> Inject Data -> Anchor IPFS -> Update License
+📜 Sovereign Licensing
+This framework is protected under GPL-3.0.
 
----
+Commercial Protocol:
 
-## 4. Licensing (GPL-3.0)
+Status GREEN: Asset is healthy. ACCESS_TOKEN is valid.
 
-- Status GREEN: Healthy. Token Valid.
-- Status RED: Fatigued (>95%). Token REVOKED.
+Status RED: Asset is fatigued (>95%). License is REVOKED.
 
----
-Author: Zhang Bin | Lab: Sovereign Node 01
+Author: Zhang Bin (FDO Architect)
+
+Contact: joy7759@gmail.com
+
+Lab: Sovereign Node 01 (Mac-Mini-ZB)
