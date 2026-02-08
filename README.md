@@ -48,22 +48,22 @@ Where:
 Initialize the sovereign node and start the lifecycle:
 
 ### Step 1: Start the Sovereign Monitor
+Launch the real-time telemetry dashboard service:
 ```bash
 python3 live_monitor.py
-# Access Dashboard: http://localhost:8000/dashboard.html
+Dashboard URL: http://localhost:8000/dashboard.html
 ### Step 2: Execute the Sovereign Publish Cycle
-Open a **new terminal window**, navigate to the project folder, and trigger the industrial data injection pipeline:
-### Step 2: Execute the Sovereign Publish Cycle
-Open a **new terminal window**, navigate to the project folder, and trigger the industrial data injection pipeline:
+In a new terminal, trigger the industrial data injection pipeline:
 ```bash
+Workflow: Evolve -> Inject Data -> Anchor IPFS -> Update License
 ./publish.sh
-# This script executes: 
-# 1. Evolution (evolve.py) 
-# 2. Robot Adaptation (robot_adapter.py) 
-# 3. Commercial Licensing (license_vault.py)
-```bash
-./publish.sh
-# This script executes: 
-# 1. Evolution (evolve.py) 
-# 2. Robot Adaptation (robot_adapter.py) 
-# 3. Commercial Licensing (license_vault.py)
+📜 Sovereign Licensing & Compliance
+This framework is protected under the GPL-3.0 License.
+
+Commercial Enforcement Protocol:
+
+Status GREEN: Asset health is normal. ACCESS_TOKEN is valid and active.
+
+Status RED: Asset is fatigued (Index > 95%). License is REVOKED automatically, and the system returns ACCESS_DENIED.
+
+Author: Zhang Bin (FDO Architect) Contact: joy7759@gmail.com Lab: Sovereign Node 01 (Mac-Mini-ZB)
