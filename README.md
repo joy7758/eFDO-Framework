@@ -51,3 +51,11 @@ Initialize the sovereign node and start the lifecycle:
 ```bash
 python3 live_monitor.py
 # Access Dashboard: http://localhost:8000/dashboard.html
+### Step 2: Execute the Sovereign Publish Cycle
+Open a **new terminal window**, navigate to the project folder, and trigger the industrial data injection pipeline:
+```bash
+./publish.sh
+# This script executes: 
+# 1. Evolution (evolve.py) 
+# 2. Robot Adaptation (robot_adapter.py) 
+# 3. Commercial Licensing (license_vault.py)
