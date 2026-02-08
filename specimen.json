@@ -1,10 +1,17 @@
 {
   "pid": "pending",
-  "generation": 1,
+  "generation": 7,
   "traits": {
     "accuracy": 0.85,
-    "speed": 0.70,
-    "robustness": 0.90
+    "speed": 0.7,
+    "robustness": 0.9
   },
-  "evolution_history": []
+  "evolution_history": [],
+  "industrial_metrics": {
+    "joint_torque_nm": 55.07,
+    "motor_temp_c": 42.41
+  },
+  "fatigue_index": 0.99,
+  "state": "CRITICAL_HALT",
+  "last_update": "Sun Feb  8 05:45:58 2026"
 }
